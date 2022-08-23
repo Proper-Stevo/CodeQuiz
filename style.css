@@ -31,13 +31,17 @@ nav {
 
 button {
     background-color: blue;
-    border: none;
+    border: 1px;
     color: white;
     padding: 10px 25px;
     text-align: center;
     display: block;
     font-size: 15px;
     margin: 10px;
+}
+
+.button:hover {
+    border-color: black;
 }
 
 div .options {
