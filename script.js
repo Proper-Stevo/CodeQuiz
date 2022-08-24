@@ -1,14 +1,14 @@
 
 const pushButton = document.getElementById("button")
 
-pushButton.addEventListener('click', selectAnswer)
+pushButton.addEventListener('click', checkAnswer)
 
 function selectAnswer() {
 };
 var qIndex = 0;
 
 const questions = [{
-    question: "Common used data types DO Not Include",
+    question: "Common used data types DO Not Include?",
     answers: ["string", "booleans", "alerts", "numbers"],
     correctAnswer: "booleans"
 },
@@ -24,19 +24,27 @@ const questions = [{
 }];
 
 function quiz() {
-    const output = [];
+    nextQuestion();
+}
+
+function nextQuestion() {
     var currentQuestion = questions[qIndex];
     var questionEl = document.getElementById("prompt");
+    for (let i = 0; i < 4; i++) {
+        var btn = document.createElement('button');
+        btn.innerHTML = currentQuestion.answers[i];
+        document.getElementById('button').appendChild(btn);
+    };
     questionEl.innerHTML = currentQuestion.question;
-    questions.answers.forEach (
-        
-    )
-}
-quiz();
+};
 
-// change the buttons, use line 27 - 30 for exampple
-// add 'click' event  for the button to work
-// use a if/else statment that only allows correct answer
-// when 'click' happens it will go to the next button 
-// add event listener to each button 
-// create a function for time
+function checkAnswer(event) {
+    console.log(event.target);
+    //if statment to check answer
+    // event listener to select answer 
+    // create else / if statemetn to check answers, if correct it moves forward if not it doesn't 
+    // make sure qIndex has a (++) to move next question
+}
+
+
+quiz();
