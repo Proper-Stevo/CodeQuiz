@@ -40,11 +40,17 @@ function nextQuestion() {
 
 function checkAnswer(event) {
     console.log(event.target);
+    if (questions[qIndex].correctAnswer == answer) {
+        score++;
+        answerIsCorrect();
+    } else {
+        answerIsWrong();
+    }; if 
     //if statment to check answer
     // event listener to select answer 
     // create else / if statemetn to check answers, if correct it moves forward if not it doesn't 
     // make sure qIndex has a (++) to move next question
-}
+};
 
 
 quiz();
