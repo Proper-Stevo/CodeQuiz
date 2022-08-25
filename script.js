@@ -9,7 +9,6 @@ function setTimer() {
         countDown.textContent = secondsLeft;
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-            sendMessage();
         }
     }, 1000);
 }
@@ -44,12 +43,15 @@ function nextQuestion() {
         btn.innerHTML = currentQuestion.answers[i];
         btn.setAttribute("class", "choice-button btnEvent");
         document.getElementById('button').appendChild(btn);
+
     };
     questionEl.innerHTML = currentQuestion.question;
     var allButtons = document.querySelectorAll(".choice-button");
 };
 
-    
+    function clearContent() {
+        document.getElementById('button').innerHTML = '';
+    }
 
 
 function checkAnswer(event) {
