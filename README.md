@@ -42,5 +42,4 @@ SOFTWARE.
  https://proper-stevo.github.io/CodeQuiz/
 
  ## image of working website
-
-![My Image](../images/website.png)
+![Screenshot of the completed webpage](/images/website.png)
