@@ -1,15 +1,19 @@
-// var timer = 0;
-function setTimer() {
-var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timer.textContent = secondsLeft;
-    if (secondsLeft === 0) {
-        clearInterval(timerInterval);
-        sendMessage();
-    }
-}, 1000 * 6);
-}
+var secondsLeft = 60;
 var qIndex = 0;
+
+
+function setTimer() {
+    var countDown = document.getElementById("count");
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        countDown.textContent = secondsLeft;
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+            sendMessage();
+        }
+    }, 1000);
+}
+
 
 const questions = [{
     question: "Common used data types DO Not Include?",
@@ -29,21 +33,24 @@ const questions = [{
 
 function quiz() {
     nextQuestion();
+    setTimer();
 }
 
 function nextQuestion() {
     var currentQuestion = questions[qIndex];
     var questionEl = document.getElementById("prompt");
     for (let i = 0; i < 4; i++) {
-        var btn = document.createElement('button');
+    var btn = document.createElement('button');
         btn.innerHTML = currentQuestion.answers[i];
         btn.setAttribute("class", "choice-button btnEvent");
         document.getElementById('button').appendChild(btn);
     };
     questionEl.innerHTML = currentQuestion.question;
     var allButtons = document.querySelectorAll(".choice-button");
-    var setTimer = 
 };
+
+    
+
 
 function checkAnswer(event) {
     if (event.target.matches("button")) {
@@ -51,18 +58,19 @@ function checkAnswer(event) {
    
     if (questions[qIndex].correctAnswer === event.target.textContent ) {
         console.log("correct");
+        qIndex = qIndex + 1;
+        nextQuestion();
       //  answerIsCorrect();
     } else {
         console.log("wrong");
-      //  timer--;
+        secondsLeft = secondsLeft -5;
         //answerIsWrong();
     }; 
 }
-    //if statment to check answer
-    // event listener to select answer 
-    // create else / if statemetn to check answers, if correct it moves forward if not it doesn't 
-    // make sure qIndex has a (++) to move next question
 };
     document.addEventListener('click', checkAnswer)
 
 quiz();
+
+
+//remove buttons after each question OR change text contecnt of buttons
