@@ -43,4 +43,4 @@ SOFTWARE.
 
  ## image of working website
 
-![alt text](https://github.com/[Proper-Stevo]/[CodeQuiz]/blob/[main]/image.jpg?raw=true)
+![My Image](../images/website.png)
