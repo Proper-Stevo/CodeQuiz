@@ -43,3 +43,4 @@ SOFTWARE.
 
  ## image of working website
 ![Screenshot of the completed webpage](/images/website.png)
+
