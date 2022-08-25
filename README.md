@@ -43,4 +43,4 @@ SOFTWARE.
 
  ## image of working website
 
-![My Image](../images/website.png)
+![My Image](/images/website.png)
