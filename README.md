@@ -39,4 +39,8 @@ SOFTWARE.
  https://github.com/Proper-Stevo/CodeQuiz
 
  Website:
- 
+ https://proper-stevo.github.io/CodeQuiz/
+
+ ## image of working website
+
+![alt text](https://github.com/[Proper-Stevo]/[CodeQuiz]/blob/[main]/image.jpg?raw=true)
