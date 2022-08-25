@@ -30,6 +30,11 @@ const questions = [{
     question: "Which JavaScript label catches all the values, except for the ones speficied?",
     answers: ["catch", "label", "try", "default"],
     correctAnswer: "default"
+},
+{
+    question: "Arrays in JavaScript can be used to store:",
+    choices: ["arrays", "other strings", "booleans", "all the above"],
+    answer: "all the above",
 }];
 // the complete quiz is working here, this was super interesting  to call because i learned so much on here
 // multiple functions are being called here 
